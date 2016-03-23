@@ -11,7 +11,7 @@ def check():
     apk_path = "exp/cve/cve_2015_6616/poc/" +apk_name
     package_name = Apk.get_package_name(apk_name)
 
-    print("---------start init cve_2015_6616---------")
+    print("---------start init "+poc_name+"---------")
     Phone.wait_phone_alive() #make sure phone ok
     Checker.phone_ready()   #set checker
     Apk.install_apk(apk_path)
@@ -22,4 +22,4 @@ def check():
 
     Apk.uninstall_apk(package_name)
     print("uninstall " + package_name)
-    print("---------end init cve_2015_6616---------")
+    print("---------end "+poc_name+"---------")
