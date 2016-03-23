@@ -43,6 +43,11 @@ def install_apk(apk_path):
         do_install_apk(apk_path)
 
 
+def get_package_name(apk_name):
+    name_arr = apk_name.split(".")
+    return ".".join(name_arr[0:-2])
+
+
 def do_install_apk(apk_path):
     ShortShell.exe("adb install -r " + apk_path)
 

@@ -14,6 +14,4 @@ if __name__ == "__main__":
                     exp_file_package = "exp."+folder+"."+exp_file_path
                     __import__(exp_file_package)
 
-
-
     Logger.export_carsh_report()

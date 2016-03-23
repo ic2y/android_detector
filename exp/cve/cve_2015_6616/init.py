@@ -9,6 +9,7 @@ def check():
     poc_name = "cve_2015_6616"
     apk_name = "com.example.ic2y.cve_2015_6616.MainActivity.apk"
     apk_path = "exp/cve/cve_2015_6616/poc/" +apk_name
+    package_name = Apk.get_package_name(apk_name)
 
     print("---------start init cve_2015_6616---------")
     Phone.wait_phone_alive() #make sure phone ok
@@ -19,4 +20,6 @@ def check():
     if Checker.is_apk_crash():
         Logger.log_to_report_crash(poc_name)
 
+    Apk.uninstall_apk(package_name)
+    print("uninstall " + package_name)
     print("---------end init cve_2015_6616---------")
